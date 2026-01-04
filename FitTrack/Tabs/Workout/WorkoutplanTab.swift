@@ -25,6 +25,10 @@ struct WorkoutplanTab: View {
                         }
                     )
                     
+                    WeeklyProgressCard(completedWorkouts: 1, totalWorkouts: 4)
+                        .padding(.horizontal)
+                        .padding(.top, 10)
+                    
                     VStack(alignment: .leading, spacing: 15) {
                         Text("Your routines")
                             .font(.title2)
