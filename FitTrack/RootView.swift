@@ -15,7 +15,7 @@ struct RootView: View {
             }
             
             Tab.init("Workout plan", systemImage: "figure.strengthtraining.traditional") {
-                
+                WorkoutplanTab()
             }
             
             Tab.init("Progress", systemImage: "chart.bar") {
