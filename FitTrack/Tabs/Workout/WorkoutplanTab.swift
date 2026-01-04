@@ -57,16 +57,11 @@ struct WorkoutplanTab: View {
                 }
 
                 ToolbarItem(placement: .topBarTrailing) {
-                    HStack(spacing: 5) {
-                        Image(systemName: "flame.fill")
-                            .font(.caption)
-                            .foregroundStyle(.orange)
-
-                        Text("1")
-                            .bold()
-                            .font(.subheadline)
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "plus")
                     }
-                    .padding()
                 }
             }
         }
