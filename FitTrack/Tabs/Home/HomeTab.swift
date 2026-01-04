@@ -23,6 +23,38 @@ struct HomeTab: View {
                             return .incomplete
                         }
                     )
+                    
+                    CaloriesCard(caloriesLeft: 1000, totalCalories: 2500, activeCalories: 200, workoutCalories: 76)
+                    
+                    HStack(spacing: 12) {
+                        MacroCard(
+                             title: "Protein left",
+                             value: 196,
+                             unit: "g",
+                             icon: "flame.fill", // Use appropriate SF Symbol
+                             color: .red,
+                             progress: 0.7
+                         )
+                        
+                        MacroCard(
+                              title: "Carbs left",
+                              value: 120,
+                              unit: "g",
+                              icon: "leaf.fill",
+                              color: .orange,
+                              progress: 0.4
+                          )
+                        
+                        MacroCard(
+                               title: "Fat left",
+                               value: 58,
+                               unit: "g",
+                               icon: "drop.fill",
+                               color: .blue,
+                               progress: 0.2
+                           )
+                    }
+                   
                 }
                 .padding()
             }
