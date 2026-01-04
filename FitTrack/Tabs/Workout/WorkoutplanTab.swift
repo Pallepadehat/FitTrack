@@ -8,8 +8,44 @@
 import SwiftUI
 
 struct WorkoutplanTab: View {
+    @State private var selectedDate = Date()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ScrollView {
+                VStack {
+                    WeekDateSelector(
+                        selectedDate: $selectedDate,
+                        statusForDate: { date in
+                            return .incomplete
+                        }
+                    )
+                }
+            }
+            .navigationTitle("Workout Plans")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+
+                    } label: {
+                        Image(systemName: "person.circle")
+                    }
+                }
+
+                ToolbarItem(placement: .topBarTrailing) {
+                    HStack(spacing: 5) {
+                        Image(systemName: "flame.fill")
+                            .font(.caption)
+                            .foregroundStyle(.orange)
+
+                        Text("1")
+                            .bold()
+                            .font(.subheadline)
+                    }
+                    .padding()
+                }
+            }
+        }
     }
 }
 

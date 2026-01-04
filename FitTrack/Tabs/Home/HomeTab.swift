@@ -38,7 +38,6 @@ struct HomeTab: View {
 
     var body: some View {
         NavigationStack {
-            VStack {
                 ScrollView {
                     VStack {
                         WeekDateSelector(
@@ -176,7 +175,7 @@ struct HomeTab: View {
                     }
                     .padding(.vertical)
                 }
-            }
+   
             .navigationTitle("Home")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
