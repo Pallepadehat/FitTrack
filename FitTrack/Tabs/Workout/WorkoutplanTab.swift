@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WorkoutplanTab: View {
     @State private var selectedDate = Date()
+    @State private var showProfile = false
     
     let columns = [
         GridItem(.flexible()),
@@ -50,9 +51,9 @@ struct WorkoutplanTab: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
-
+                        showProfile.toggle()
                     } label: {
-                        Image(systemName: "person.circle")
+                        Image(systemName: "gearshape")
                     }
                 }
 
@@ -63,6 +64,9 @@ struct WorkoutplanTab: View {
                         Image(systemName: "plus")
                     }
                 }
+            }
+            .sheet(isPresented: $showProfile) {
+                ProfileView()
             }
         }
     }

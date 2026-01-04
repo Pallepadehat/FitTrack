@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct FitTrackApp: App {
@@ -13,5 +14,6 @@ struct FitTrackApp: App {
         WindowGroup {
             RootView()
         }
+        .modelContainer(for: UserProfile.self)
     }
 }

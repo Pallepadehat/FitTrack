@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeTab: View {
     @State private var selectedDate = Date()
+    @State private var showProfile = false
     @State private var waterAmount: Int = 0  // Track water intake
     @State private var calorieSources: [CalorieSource] = [
         CalorieSource(
@@ -181,9 +182,9 @@ struct HomeTab: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
-
+                        showProfile.toggle()
                     } label: {
-                        Image(systemName: "person.circle")
+                        Image(systemName: "gearshape")
                     }
                 }
 
@@ -200,6 +201,9 @@ struct HomeTab: View {
                     .padding()
 
                 }
+            }
+            .sheet(isPresented: $showProfile) {
+                ProfileView()
             }
         }
     }
