@@ -9,7 +9,36 @@ import SwiftUI
 
 struct HomeTab: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+                Text("Hello world")
+            }
+            .navigationTitle("Home")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "person.circle")
+                    }
+                }
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    HStack(spacing: 5) {
+                        Image(systemName: "flame.fill")
+                            .font(.caption)
+                            .foregroundStyle(.orange)
+                        
+                        Text("1")
+                            .bold()
+                            .font(.subheadline)
+                    }
+                    .padding()
+               
+                }
+            }
+        }
     }
 }
 

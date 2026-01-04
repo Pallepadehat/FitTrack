@@ -11,7 +11,7 @@ struct RootView: View {
     var body: some View {
         TabView {
             Tab.init("Home", systemImage: "house") {
-                
+                HomeTab()
             }
             
             Tab.init("Workout plan", systemImage: "figure.strengthtraining.traditional") {
