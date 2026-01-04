@@ -25,6 +25,10 @@ struct RootView: View {
             Tab.init("Groups", systemImage: "person.3.fill") {
                 
             }
+            
+            Tab.init("Add", systemImage: "plus", role: .search) {
+                
+            }
         }
     }
 }
